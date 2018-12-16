@@ -1,6 +1,8 @@
 # OMJava
 OpenModelica Java Interface
 
+[![Build Status](https://travis-ci.org/RaspInLoop/RaspInLoop.svg?branch=master)](https://travis-ci.org/RaspInLoop/OMJava)
+
 To build, simply use the command `make` and then use the generated jar-file somewhere.
 
 The existing jUnit tests have not been tested since refactoring this repository from
