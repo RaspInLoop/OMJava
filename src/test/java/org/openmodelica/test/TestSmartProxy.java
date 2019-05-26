@@ -18,16 +18,25 @@ import org.openmodelica.corba.parser.*;
 
 import static org.junit.Assert.*;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class TestSmartProxy {
   private static SmartProxy proxy;
 
-  @BeforeClass
-  public static void initClass() throws ConnectException, ParseException {
-    proxy = new SmartProxy("junit", "Modelica", true, true);
-    proxy.sendExpression("cd(\""+System.getProperty("user.dir").replace("\\", "/")+"/test_files\")");
-    if (true != proxy.sendModelicaExpression("loadFile(\"simple.mo\")", ModelicaBoolean.class).b)
-      throw new ParseException("Failed to load file");
-  }
+	@BeforeClass
+	public static void initClass() throws ConnectException, ParseException, URISyntaxException {
+		ClassLoader classLoader = TestSmartProxy.class.getClassLoader();
+		URI uri = classLoader.getResource("test_files").toURI();
+		Path test_files = Paths.get(uri);
+
+		proxy = new SmartProxy("junit", "Modelica", true, true);
+		proxy.sendExpression("cd(\"" + test_files.toString().replace("\\", "\\\\") + "\")");
+		if (true != proxy.sendModelicaExpression("loadFile(\"simple.mo\")", ModelicaBoolean.class).b)
+			throw new ParseException("Failed to load file");
+	}
 
   @AfterClass
   public static void destroyClass() throws ConnectException {

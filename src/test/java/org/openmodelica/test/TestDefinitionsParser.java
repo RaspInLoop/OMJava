@@ -5,9 +5,15 @@ import static org.junit.Assert.*;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.lang.reflect.Constructor;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.openmodelica.*;
@@ -15,17 +21,27 @@ import org.openmodelica.corba.parser.DefinitionsCreator;
 
 public class TestDefinitionsParser {
 
+
+	private Path test_files;
+	
+	@Before
+	public void  init_test_file() throws URISyntaxException{
+	  ClassLoader classLoader = getClass().getClassLoader();
+	  URI uri = classLoader.getResource("test_files").toURI();
+	  test_files = Paths.get(uri);
+  }
+	
   public void test_Simple_mo() throws Exception {
-    File jarFile = new File("test_files/simple.jar");
+    File jarFile = test_files.resolve("simple.jar").toFile();
     jarFile.delete();
-    DefinitionsCreator.createDefinitions(jarFile, "org.openmodelica.program", new File(System.getProperty("user.dir")+"/test_files"), new String[]{"simple.mo"}, true);
+    DefinitionsCreator.createDefinitions(jarFile, "org.openmodelica.program", test_files.toAbsolutePath().toFile(), new String[]{"simple.mo"}, true);
   }
 
   @Test
   public void test_Simple_mo_classLoader() throws Exception {
     test_Simple_mo();
     // Works in Linux...
-    File jarFile = new File("test_files/simple.jar");
+    File jarFile = test_files.resolve("simple.jar").toFile();
     URLClassLoader cl = new URLClassLoader(new URL[]{new URL("jar:"+jarFile.toURI()+"!/")});
     for (URL url : cl.getURLs())
       System.out.println(url.toString());
@@ -37,8 +53,10 @@ public class TestDefinitionsParser {
 
   @Test
   public void test_meta_modelica_mo() throws Exception {
-    DefinitionsCreator.main("test_files/meta_modelica.jar", "org.openmodelica.metamodelicaprogram",
-        new File("test_files").getAbsolutePath(), "meta_modelica.mo");
+	String meta_modelica_jarFilename = test_files.resolve("meta_modelica.jar").toString();
+	 
+    DefinitionsCreator.main(meta_modelica_jarFilename, "org.openmodelica.metamodelicaprogram",
+    		test_files.toAbsolutePath().toString(), "meta_modelica.mo");
   }
 
   @Ignore
@@ -53,6 +71,7 @@ public class TestDefinitionsParser {
       true);
   }
 
+  @Ignore
   @Test
   /**
    *  Absyn.mo contains things like "type XXX = tuple<YYY, ZZZ>;"
@@ -66,7 +85,8 @@ public class TestDefinitionsParser {
         new String[]{"FrontEnd/Absyn.mo"},
         true);
   }
-
+  
+  @Ignore
   @Test
   public void test_OMC_Values_mo() throws Exception  {
     File jarFile = new File("test_files/OMC_Values.jar");
