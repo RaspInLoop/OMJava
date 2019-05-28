@@ -3,8 +3,5 @@ OpenModelica Java Interface
 
 [![Build Status](https://travis-ci.org/RaspInLoop/OMJava.svg?branch=master)](https://travis-ci.org/RaspInLoop/OMJava) 
 
-To build, simply use the command `make` and then use the generated jar-file somewhere.
+To build, simply use the command `mvn package` or 'mvn install'
 
-The existing jUnit tests have not been tested since refactoring this repository from
-[OMCompiler](https://github.com/OpenModelica/OMCompiler) due to the latest jUnit release 
-4.12) not being compatible with Java 1.8, but should work with `make test`.
