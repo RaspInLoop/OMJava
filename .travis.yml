@@ -8,5 +8,13 @@ before_install:
   - sudo apt-get install openmodelica
   - sudo apt-get install omlib-modelica-3.2.2
 
+cache:
+  directories:
+  - $HOME/.m2
+
 env:
   - OPENMODELICAHOME=/usr/
+  
+script: 
+  - mvn install -B
+  
