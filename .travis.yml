@@ -28,6 +28,7 @@ deploy:
   file: "build/RaspInLoop/OMJava/target/OMJava-$project_version.jar"
   skip_cleanup: true
   overwrite: true
+  draft: true
   on:
     repo: RaspInLoop/OMJava
     tag: true
