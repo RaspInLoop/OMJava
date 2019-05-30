@@ -6,6 +6,7 @@ before_install:
   - wget -q http://build.openmodelica.org/apt/openmodelica.asc -O- | sudo apt-key add - 
   - sudo apt-get update
   - sudo apt-get install openmodelica
+  - sudo apt-get install omc-java
   - sudo apt-get install omlib-modelica-3.2.2
 
 cache:
