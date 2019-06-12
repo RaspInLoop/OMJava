@@ -5,3 +5,9 @@ OpenModelica Java Interface
 
 To build, simply use the command `mvn package` or 'mvn install' on a system having openModelica installed and with environement variable "OPENMODELICAHOME" set accordingly.
 
+To install the released package:
+Download the latest package from the release page of this project. then install it locally with this maven command:
+<pre>
+mvn install:install-file -Dfile=OMJava-0.0.1-SNAPSHOT.jar -DgroupId=org.raspinloop.openmodelica -DartifactId=OMJava -Dversion=0.0.1-SNAPSHOT -Dpackaging=jar
+</pre>
+
