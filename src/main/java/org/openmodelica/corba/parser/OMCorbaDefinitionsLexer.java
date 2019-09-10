@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g 2018-12-16 10:44:20
+// $ANTLR 3.5.2 org/openmodelica/corba/parser/OMCorbaDefinitions.g 2019-09-01 18:17:57
 package org.openmodelica.corba.parser;
 
 import org.antlr.runtime.*;
@@ -51,15 +51,15 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 	public OMCorbaDefinitionsLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g"; }
+	@Override public String getGrammarFileName() { return "org/openmodelica/corba/parser/OMCorbaDefinitions.g"; }
 
 	// $ANTLR start "T__8"
 	public final void mT__8() throws RecognitionException {
 		try {
 			int _type = T__8;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:9:6: ( '(' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:9:8: '('
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:9:6: ( '(' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:9:8: '('
 			{
 			match('('); 
 			}
@@ -78,8 +78,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__9;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:10:6: ( ')' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:10:8: ')'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:10:6: ( ')' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:10:8: ')'
 			{
 			match(')'); 
 			}
@@ -98,8 +98,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:11:7: ( ',' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:11:9: ','
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:11:7: ( ',' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:11:9: ','
 			{
 			match(','); 
 			}
@@ -118,8 +118,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__11;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:12:7: ( '<' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:12:9: '<'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:12:7: ( '<' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:12:9: '<'
 			{
 			match('<'); 
 			}
@@ -138,8 +138,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__12;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:13:7: ( '>' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:13:9: '>'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:13:7: ( '>' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:13:9: '>'
 			{
 			match('>'); 
 			}
@@ -158,8 +158,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:14:7: ( 'Boolean' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:14:9: 'Boolean'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:14:7: ( 'Boolean' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:14:9: 'Boolean'
 			{
 			match("Boolean"); 
 
@@ -179,8 +179,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__14;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:15:7: ( 'Integer' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:15:9: 'Integer'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:15:7: ( 'Integer' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:15:9: 'Integer'
 			{
 			match("Integer"); 
 
@@ -200,8 +200,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__15;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:16:7: ( 'Option' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:16:9: 'Option'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:16:7: ( 'Option' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:16:9: 'Option'
 			{
 			match("Option"); 
 
@@ -221,8 +221,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:17:7: ( 'Real' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:17:9: 'Real'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:17:7: ( 'Real' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:17:9: 'Real'
 			{
 			match("Real"); 
 
@@ -242,8 +242,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__17;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:18:7: ( 'String' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:18:9: 'String'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:18:7: ( 'String' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:18:9: 'String'
 			{
 			match("String"); 
 
@@ -263,8 +263,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:19:7: ( '[' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:19:9: '['
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:19:7: ( '[' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:19:9: '['
 			{
 			match('['); 
 			}
@@ -283,8 +283,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__19;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:20:7: ( 'extends' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:20:9: 'extends'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:20:7: ( 'extends' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:20:9: 'extends'
 			{
 			match("extends"); 
 
@@ -304,8 +304,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:21:7: ( 'function' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:21:9: 'function'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:21:7: ( 'function' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:21:9: 'function'
 			{
 			match("function"); 
 
@@ -325,8 +325,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:22:7: ( 'input' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:22:9: 'input'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:22:7: ( 'input' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:22:9: 'input'
 			{
 			match("input"); 
 
@@ -346,8 +346,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:23:7: ( 'list' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:23:9: 'list'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:23:7: ( 'list' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:23:9: 'list'
 			{
 			match("list"); 
 
@@ -367,8 +367,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__23;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:24:7: ( 'metarecord' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:24:9: 'metarecord'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:24:7: ( 'metarecord' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:24:9: 'metarecord'
 			{
 			match("metarecord"); 
 
@@ -388,8 +388,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:25:7: ( 'output' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:25:9: 'output'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:25:7: ( 'output' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:25:9: 'output'
 			{
 			match("output"); 
 
@@ -409,8 +409,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__25;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:26:7: ( 'package' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:26:9: 'package'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:26:7: ( 'package' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:26:9: 'package'
 			{
 			match("package"); 
 
@@ -430,8 +430,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:27:7: ( 'partial' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:27:9: 'partial'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:27:7: ( 'partial' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:27:9: 'partial'
 			{
 			match("partial"); 
 
@@ -451,8 +451,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__27;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:28:7: ( 'record' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:28:9: 'record'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:28:7: ( 'record' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:28:9: 'record'
 			{
 			match("record"); 
 
@@ -472,8 +472,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__28;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:29:7: ( 'replaceable' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:29:9: 'replaceable'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:29:7: ( 'replaceable' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:29:9: 'replaceable'
 			{
 			match("replaceable"); 
 
@@ -493,8 +493,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__29;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:30:7: ( 'tuple' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:30:9: 'tuple'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:30:7: ( 'tuple' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:30:9: 'tuple'
 			{
 			match("tuple"); 
 
@@ -514,8 +514,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__30;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:31:7: ( 'type' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:31:9: 'type'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:31:7: ( 'type' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:31:9: 'type'
 			{
 			match("type"); 
 
@@ -535,8 +535,8 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = T__31;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:32:7: ( 'uniontype' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:32:9: 'uniontype'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:32:7: ( 'uniontype' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:32:9: 'uniontype'
 			{
 			match("uniontype"); 
 
@@ -556,10 +556,10 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = QID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:75:5: ( ( ID '.' )+ ID )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:75:7: ( ID '.' )+ ID
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:75:5: ( ( ID '.' )+ ID )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:75:7: ( ID '.' )+ ID
 			{
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:75:7: ( ID '.' )+
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:75:7: ( ID '.' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -567,7 +567,7 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 				alt1 = dfa1.predict(input);
 				switch (alt1) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:75:8: ID '.'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:75:8: ID '.'
 					{
 					mID(); 
 
@@ -601,7 +601,7 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:76:4: ( ( '_' | 'a' .. 'z' | 'A' .. 'Z' ) ( '_' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* | '\\'' (~ ( '\\\\' | '\\'' ) | '\\\\\\'' | '\\\\\"' | '\\\\?' | '\\\\\\\\' | '\\\\a' | '\\\\b' | '\\\\f' | '\\\\n' | '\\\\r' | '\\\\t' | '\\\\v' )* '\\'' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:76:4: ( ( '_' | 'a' .. 'z' | 'A' .. 'Z' ) ( '_' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* | '\\'' (~ ( '\\\\' | '\\'' ) | '\\\\\\'' | '\\\\\"' | '\\\\?' | '\\\\\\\\' | '\\\\a' | '\\\\b' | '\\\\f' | '\\\\n' | '\\\\r' | '\\\\t' | '\\\\v' )* '\\'' )
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( ((LA4_0 >= 'A' && LA4_0 <= 'Z')||LA4_0=='_'||(LA4_0 >= 'a' && LA4_0 <= 'z')) ) {
@@ -619,7 +619,7 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 
 			switch (alt4) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:76:6: ( '_' | 'a' .. 'z' | 'A' .. 'Z' ) ( '_' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:76:6: ( '_' | 'a' .. 'z' | 'A' .. 'Z' ) ( '_' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 					{
 					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -629,7 +629,7 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 						recover(mse);
 						throw mse;
 					}
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:76:29: ( '_' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:76:29: ( '_' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 					loop2:
 					while (true) {
 						int alt2=2;
@@ -640,7 +640,7 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 
 						switch (alt2) {
 						case 1 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:
 							{
 							if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 								input.consume();
@@ -661,10 +661,10 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:6: '\\'' (~ ( '\\\\' | '\\'' ) | '\\\\\\'' | '\\\\\"' | '\\\\?' | '\\\\\\\\' | '\\\\a' | '\\\\b' | '\\\\f' | '\\\\n' | '\\\\r' | '\\\\t' | '\\\\v' )* '\\''
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:6: '\\'' (~ ( '\\\\' | '\\'' ) | '\\\\\\'' | '\\\\\"' | '\\\\?' | '\\\\\\\\' | '\\\\a' | '\\\\b' | '\\\\f' | '\\\\n' | '\\\\r' | '\\\\t' | '\\\\v' )* '\\''
 					{
 					match('\''); 
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:10: (~ ( '\\\\' | '\\'' ) | '\\\\\\'' | '\\\\\"' | '\\\\?' | '\\\\\\\\' | '\\\\a' | '\\\\b' | '\\\\f' | '\\\\n' | '\\\\r' | '\\\\t' | '\\\\v' )*
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:10: (~ ( '\\\\' | '\\'' ) | '\\\\\\'' | '\\\\\"' | '\\\\?' | '\\\\\\\\' | '\\\\a' | '\\\\b' | '\\\\f' | '\\\\n' | '\\\\r' | '\\\\t' | '\\\\v' )*
 					loop3:
 					while (true) {
 						int alt3=13;
@@ -734,7 +734,7 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 
 						switch (alt3) {
 						case 1 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:11: ~ ( '\\\\' | '\\'' )
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:11: ~ ( '\\\\' | '\\'' )
 							{
 							if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '&')||(input.LA(1) >= '(' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
 								input.consume();
@@ -747,77 +747,77 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 							}
 							break;
 						case 2 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:24: '\\\\\\''
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:24: '\\\\\\''
 							{
 							match("\\'"); 
 
 							}
 							break;
 						case 3 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:34: '\\\\\"'
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:34: '\\\\\"'
 							{
 							match("\\\""); 
 
 							}
 							break;
 						case 4 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:41: '\\\\?'
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:41: '\\\\?'
 							{
 							match("\\?"); 
 
 							}
 							break;
 						case 5 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:49: '\\\\\\\\'
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:49: '\\\\\\\\'
 							{
 							match("\\\\"); 
 
 							}
 							break;
 						case 6 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:58: '\\\\a'
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:58: '\\\\a'
 							{
 							match("\\a"); 
 
 							}
 							break;
 						case 7 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:66: '\\\\b'
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:66: '\\\\b'
 							{
 							match("\\b"); 
 
 							}
 							break;
 						case 8 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:74: '\\\\f'
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:74: '\\\\f'
 							{
 							match("\\f"); 
 
 							}
 							break;
 						case 9 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:82: '\\\\n'
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:82: '\\\\n'
 							{
 							match("\\n"); 
 
 							}
 							break;
 						case 10 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:90: '\\\\r'
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:90: '\\\\r'
 							{
 							match("\\r"); 
 
 							}
 							break;
 						case 11 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:98: '\\\\t'
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:98: '\\\\t'
 							{
 							match("\\t"); 
 
 							}
 							break;
 						case 12 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:77:106: '\\\\v'
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:77:106: '\\\\v'
 							{
 							match("\\v"); 
 
@@ -848,10 +848,10 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:78:5: ( ( '-' )? ( '0' .. '9' )+ )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:78:8: ( '-' )? ( '0' .. '9' )+
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:78:5: ( ( '-' )? ( '0' .. '9' )+ )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:78:8: ( '-' )? ( '0' .. '9' )+
 			{
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:78:8: ( '-' )?
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:78:8: ( '-' )?
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0=='-') ) {
@@ -859,7 +859,7 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 			}
 			switch (alt5) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:78:8: '-'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:78:8: '-'
 					{
 					match('-'); 
 					}
@@ -867,7 +867,7 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 
 			}
 
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:78:12: ( '0' .. '9' )+
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:78:12: ( '0' .. '9' )+
 			int cnt6=0;
 			loop6:
 			while (true) {
@@ -879,7 +879,7 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 
 				switch (alt6) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -916,10 +916,10 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:79:5: ( ( '\\r' | '\\n' | ' ' | '\\t' )+ )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:79:9: ( '\\r' | '\\n' | ' ' | '\\t' )+
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:79:5: ( ( '\\r' | '\\n' | ' ' | '\\t' )+ )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:79:9: ( '\\r' | '\\n' | ' ' | '\\t' )+
 			{
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:79:9: ( '\\r' | '\\n' | ' ' | '\\t' )+
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:79:9: ( '\\r' | '\\n' | ' ' | '\\t' )+
 			int cnt7=0;
 			loop7:
 			while (true) {
@@ -931,7 +931,7 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 
 				switch (alt7) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:
 					{
 					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 						input.consume();
@@ -966,201 +966,201 @@ public class OMCorbaDefinitionsLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | QID | ID | INT | WS )
+		// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | QID | ID | INT | WS )
 		int alt8=28;
 		alt8 = dfa8.predict(input);
 		switch (alt8) {
 			case 1 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:10: T__8
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:10: T__8
 				{
 				mT__8(); 
 
 				}
 				break;
 			case 2 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:15: T__9
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:15: T__9
 				{
 				mT__9(); 
 
 				}
 				break;
 			case 3 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:20: T__10
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:20: T__10
 				{
 				mT__10(); 
 
 				}
 				break;
 			case 4 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:26: T__11
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:26: T__11
 				{
 				mT__11(); 
 
 				}
 				break;
 			case 5 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:32: T__12
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:32: T__12
 				{
 				mT__12(); 
 
 				}
 				break;
 			case 6 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:38: T__13
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:38: T__13
 				{
 				mT__13(); 
 
 				}
 				break;
 			case 7 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:44: T__14
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:44: T__14
 				{
 				mT__14(); 
 
 				}
 				break;
 			case 8 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:50: T__15
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:50: T__15
 				{
 				mT__15(); 
 
 				}
 				break;
 			case 9 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:56: T__16
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:56: T__16
 				{
 				mT__16(); 
 
 				}
 				break;
 			case 10 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:62: T__17
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:62: T__17
 				{
 				mT__17(); 
 
 				}
 				break;
 			case 11 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:68: T__18
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:68: T__18
 				{
 				mT__18(); 
 
 				}
 				break;
 			case 12 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:74: T__19
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:74: T__19
 				{
 				mT__19(); 
 
 				}
 				break;
 			case 13 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:80: T__20
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:80: T__20
 				{
 				mT__20(); 
 
 				}
 				break;
 			case 14 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:86: T__21
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:86: T__21
 				{
 				mT__21(); 
 
 				}
 				break;
 			case 15 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:92: T__22
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:92: T__22
 				{
 				mT__22(); 
 
 				}
 				break;
 			case 16 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:98: T__23
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:98: T__23
 				{
 				mT__23(); 
 
 				}
 				break;
 			case 17 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:104: T__24
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:104: T__24
 				{
 				mT__24(); 
 
 				}
 				break;
 			case 18 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:110: T__25
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:110: T__25
 				{
 				mT__25(); 
 
 				}
 				break;
 			case 19 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:116: T__26
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:116: T__26
 				{
 				mT__26(); 
 
 				}
 				break;
 			case 20 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:122: T__27
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:122: T__27
 				{
 				mT__27(); 
 
 				}
 				break;
 			case 21 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:128: T__28
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:128: T__28
 				{
 				mT__28(); 
 
 				}
 				break;
 			case 22 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:134: T__29
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:134: T__29
 				{
 				mT__29(); 
 
 				}
 				break;
 			case 23 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:140: T__30
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:140: T__30
 				{
 				mT__30(); 
 
 				}
 				break;
 			case 24 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:146: T__31
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:146: T__31
 				{
 				mT__31(); 
 
 				}
 				break;
 			case 25 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:152: QID
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:152: QID
 				{
 				mQID(); 
 
 				}
 				break;
 			case 26 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:156: ID
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:156: ID
 				{
 				mID(); 
 
 				}
 				break;
 			case 27 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:159: INT
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:159: INT
 				{
 				mINT(); 
 
 				}
 				break;
 			case 28 :
-				// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:1:163: WS
+				// org/openmodelica/corba/parser/OMCorbaDefinitions.g:1:163: WS
 				{
 				mWS(); 
 

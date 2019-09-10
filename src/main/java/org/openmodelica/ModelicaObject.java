@@ -9,6 +9,7 @@ public interface ModelicaObject {
   public void setObject(ModelicaObject o);
   /**
    * Same as toString(), but more efficient
+   * @param buffer the buffer that will receive string
    */
   public void printToBuffer(StringBuffer buffer);
 }

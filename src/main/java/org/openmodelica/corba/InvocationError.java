@@ -73,6 +73,8 @@ public class InvocationError extends CompilerException
 	 * error. E.g. 'fetching contents of class foo.bar'
 	 *
 	 * The description should be phrased so that
+	 * @return the human readable description of the action that triggered this
+	 * error
 	 */
 	public String getAction()
 	{

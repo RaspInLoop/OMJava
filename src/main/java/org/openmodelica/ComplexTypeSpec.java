@@ -1,6 +1,6 @@
 package org.openmodelica;
 
-/**
+/*
  * Similar to OpenModelica TCOMPLEX
  */
 public class ComplexTypeSpec<T extends ModelicaObject> extends TypeSpec<T> {

@@ -1,6 +1,6 @@
 package org.openmodelica;
 
-/**
+/*
  * Similar to OpenModelica Absyn.TPATH
  */
 public class SimpleTypeSpec<T extends ModelicaObject> extends TypeSpec<T> {

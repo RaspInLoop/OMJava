@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g 2018-12-16 10:44:20
+// $ANTLR 3.5.2 org/openmodelica/corba/parser/OMCorbaDefinitions.g 2019-09-01 18:17:57
 package org.openmodelica.corba.parser;import java.util.Vector;
 
 import org.antlr.runtime.*;
@@ -61,7 +61,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 	}
 
 	@Override public String[] getTokenNames() { return OMCorbaDefinitionsParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g"; }
+	@Override public String getGrammarFileName() { return "org/openmodelica/corba/parser/OMCorbaDefinitions.g"; }
 
 
 	public Vector<PackageDefinition> defs = new Vector<PackageDefinition>();
@@ -76,15 +76,15 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "definitions"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:23:1: definitions : '(' ( object )* ')' EOF ;
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:23:1: definitions : '(' ( object )* ')' EOF ;
 	public final void definitions() throws RecognitionException {
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:23:13: ( '(' ( object )* ')' EOF )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:23:15: '(' ( object )* ')' EOF
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:23:13: ( '(' ( object )* ')' EOF )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:23:15: '(' ( object )* ')' EOF
 			{
 			this.curPackage = null; PackageDefinition pack = new PackageDefinition(null);
 			match(input,8,FOLLOW_8_in_definitions63); 
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:24:7: ( object )*
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:24:7: ( object )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -95,7 +95,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 				switch (alt1) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:24:8: object
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:24:8: object
 					{
 					pushFollow(FOLLOW_object_in_definitions66);
 					object();
@@ -129,10 +129,10 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "object"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:26:1: object : ( package_ | record | function | uniontype | typedef | replaceable_type );
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:26:1: object : ( package_ | record | function | uniontype | typedef | replaceable_type );
 	public final void object() throws RecognitionException {
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:26:8: ( package_ | record | function | uniontype | typedef | replaceable_type )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:26:8: ( package_ | record | function | uniontype | typedef | replaceable_type )
 			int alt2=6;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0==8) ) {
@@ -190,7 +190,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 			switch (alt2) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:26:10: package_
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:26:10: package_
 					{
 					pushFollow(FOLLOW_package__in_object84);
 					package_();
@@ -199,7 +199,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 2 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:26:21: record
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:26:21: record
 					{
 					pushFollow(FOLLOW_record_in_object88);
 					record();
@@ -208,7 +208,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 3 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:26:30: function
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:26:30: function
 					{
 					pushFollow(FOLLOW_function_in_object92);
 					function();
@@ -217,7 +217,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 4 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:26:41: uniontype
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:26:41: uniontype
 					{
 					pushFollow(FOLLOW_uniontype_in_object96);
 					uniontype();
@@ -226,7 +226,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 5 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:26:53: typedef
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:26:53: typedef
 					{
 					pushFollow(FOLLOW_typedef_in_object100);
 					typedef();
@@ -235,7 +235,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 6 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:26:63: replaceable_type
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:26:63: replaceable_type
 					{
 					pushFollow(FOLLOW_replaceable_type_in_object104);
 					replaceable_type();
@@ -259,19 +259,19 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "package_"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:28:1: package_ : '(' 'package' ID ( object )* ')' ;
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:28:1: package_ : '(' 'package' ID ( object )* ')' ;
 	public final void package_() throws RecognitionException {
 		Token ID1=null;
 
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:28:10: ( '(' 'package' ID ( object )* ')' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:28:12: '(' 'package' ID ( object )* ')'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:28:10: ( '(' 'package' ID ( object )* ')' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:28:12: '(' 'package' ID ( object )* ')'
 			{
 			match(input,8,FOLLOW_8_in_package_112); 
 			match(input,25,FOLLOW_25_in_package_114); 
 			ID1=(Token)match(input,ID,FOLLOW_ID_in_package_116); 
 			String oldPackage = curPackage; curPackage = (curPackage != null ? curPackage + "." + (ID1!=null?ID1.getText():null) : (ID1!=null?ID1.getText():null)); PackageDefinition pack = new PackageDefinition(curPackage);
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:29:12: ( object )*
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:29:12: ( object )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -282,7 +282,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 				switch (alt3) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:29:13: object
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:29:13: object
 					{
 					pushFollow(FOLLOW_object_in_package_132);
 					object();
@@ -315,14 +315,14 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "record"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:30:1: record : ( '(' 'record' ID1= ID ( ( ( '(' varDef ')' ) | extends_ ) | object )* ')' | '(' 'metarecord' ID1= ID INT UT= ID ( ( ( '(' varDef ')' ) | extends_ ) | object )* ')' );
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:30:1: record : ( '(' 'record' ID1= ID ( ( ( '(' varDef ')' ) | extends_ ) | object )* ')' | '(' 'metarecord' ID1= ID INT UT= ID ( ( ( '(' varDef ')' ) | extends_ ) | object )* ')' );
 	public final void record() throws RecognitionException {
 		Token ID1=null;
 		Token UT=null;
 		Token INT2=null;
 
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:30:8: ( '(' 'record' ID1= ID ( ( ( '(' varDef ')' ) | extends_ ) | object )* ')' | '(' 'metarecord' ID1= ID INT UT= ID ( ( ( '(' varDef ')' ) | extends_ ) | object )* ')' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:30:8: ( '(' 'record' ID1= ID ( ( ( '(' varDef ')' ) | extends_ ) | object )* ')' | '(' 'metarecord' ID1= ID INT UT= ID ( ( ( '(' varDef ')' ) | extends_ ) | object )* ')' )
 			int alt8=2;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0==8) ) {
@@ -356,13 +356,13 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 			switch (alt8) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:30:10: '(' 'record' ID1= ID ( ( ( '(' varDef ')' ) | extends_ ) | object )* ')'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:30:10: '(' 'record' ID1= ID ( ( ( '(' varDef ')' ) | extends_ ) | object )* ')'
 					{
 					match(input,8,FOLLOW_8_in_record147); 
 					match(input,27,FOLLOW_27_in_record149); 
 					ID1=(Token)match(input,ID,FOLLOW_ID_in_record153); 
 					String oldPackage = curPackage; curPackage = (curPackage != null ? curPackage + "." : "") + (ID1!=null?ID1.getText():null) ; RecordDefinition rec = new RecordDefinition((ID1!=null?ID1.getText():null), curPackage); PackageDefinition pack = new PackageDefinition(curPackage + ".inner");
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:31:10: ( ( ( '(' varDef ')' ) | extends_ ) | object )*
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:31:10: ( ( ( '(' varDef ')' ) | extends_ ) | object )*
 					loop5:
 					while (true) {
 						int alt5=3;
@@ -380,9 +380,9 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 						switch (alt5) {
 						case 1 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:31:11: ( ( '(' varDef ')' ) | extends_ )
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:31:11: ( ( '(' varDef ')' ) | extends_ )
 							{
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:31:11: ( ( '(' varDef ')' ) | extends_ )
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:31:11: ( ( '(' varDef ')' ) | extends_ )
 							int alt4=2;
 							int LA4_0 = input.LA(1);
 							if ( (LA4_0==8) ) {
@@ -416,10 +416,10 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 							switch (alt4) {
 								case 1 :
-									// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:31:12: ( '(' varDef ')' )
+									// org/openmodelica/corba/parser/OMCorbaDefinitions.g:31:12: ( '(' varDef ')' )
 									{
-									// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:31:12: ( '(' varDef ')' )
-									// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:31:13: '(' varDef ')'
+									// org/openmodelica/corba/parser/OMCorbaDefinitions.g:31:12: ( '(' varDef ')' )
+									// org/openmodelica/corba/parser/OMCorbaDefinitions.g:31:13: '(' varDef ')'
 									{
 									match(input,8,FOLLOW_8_in_record169); 
 									pushFollow(FOLLOW_varDef_in_record171);
@@ -432,7 +432,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 									}
 									break;
 								case 2 :
-									// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:31:29: extends_
+									// org/openmodelica/corba/parser/OMCorbaDefinitions.g:31:29: extends_
 									{
 									pushFollow(FOLLOW_extends__in_record176);
 									extends_();
@@ -447,7 +447,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 							}
 							break;
 						case 2 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:32:13: object
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:32:13: object
 							{
 							pushFollow(FOLLOW_object_in_record192);
 							object();
@@ -467,7 +467,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 2 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:34:11: '(' 'metarecord' ID1= ID INT UT= ID ( ( ( '(' varDef ')' ) | extends_ ) | object )* ')'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:34:11: '(' 'metarecord' ID1= ID INT UT= ID ( ( ( '(' varDef ')' ) | extends_ ) | object )* ')'
 					{
 					match(input,8,FOLLOW_8_in_record223); 
 					match(input,23,FOLLOW_23_in_record225); 
@@ -478,7 +478,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					UT=(Token)match(input,ID,FOLLOW_ID_in_record261); 
 					String uniontype = (UT!=null?UT.getText():null);
 					rec = new RecordDefinition(recID, uniontype, index, curPackage);
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:38:12: ( ( ( '(' varDef ')' ) | extends_ ) | object )*
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:38:12: ( ( ( '(' varDef ')' ) | extends_ ) | object )*
 					loop7:
 					while (true) {
 						int alt7=3;
@@ -496,9 +496,9 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 						switch (alt7) {
 						case 1 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:38:13: ( ( '(' varDef ')' ) | extends_ )
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:38:13: ( ( '(' varDef ')' ) | extends_ )
 							{
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:38:13: ( ( '(' varDef ')' ) | extends_ )
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:38:13: ( ( '(' varDef ')' ) | extends_ )
 							int alt6=2;
 							int LA6_0 = input.LA(1);
 							if ( (LA6_0==8) ) {
@@ -532,10 +532,10 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 							switch (alt6) {
 								case 1 :
-									// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:38:14: ( '(' varDef ')' )
+									// org/openmodelica/corba/parser/OMCorbaDefinitions.g:38:14: ( '(' varDef ')' )
 									{
-									// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:38:14: ( '(' varDef ')' )
-									// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:38:15: '(' varDef ')'
+									// org/openmodelica/corba/parser/OMCorbaDefinitions.g:38:14: ( '(' varDef ')' )
+									// org/openmodelica/corba/parser/OMCorbaDefinitions.g:38:15: '(' varDef ')'
 									{
 									match(input,8,FOLLOW_8_in_record292); 
 									pushFollow(FOLLOW_varDef_in_record294);
@@ -548,7 +548,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 									}
 									break;
 								case 2 :
-									// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:38:31: extends_
+									// org/openmodelica/corba/parser/OMCorbaDefinitions.g:38:31: extends_
 									{
 									pushFollow(FOLLOW_extends__in_record299);
 									extends_();
@@ -563,7 +563,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 							}
 							break;
 						case 2 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:39:15: object
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:39:15: object
 							{
 							pushFollow(FOLLOW_object_in_record317);
 							object();
@@ -598,11 +598,11 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "extends_"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:41:1: extends_ : '(' 'extends' fqid ')' ;
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:41:1: extends_ : '(' 'extends' fqid ')' ;
 	public final void extends_() throws RecognitionException {
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:41:10: ( '(' 'extends' fqid ')' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:41:12: '(' 'extends' fqid ')'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:41:10: ( '(' 'extends' fqid ')' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:41:12: '(' 'extends' fqid ')'
 			{
 			match(input,8,FOLLOW_8_in_extends_345); 
 			match(input,19,FOLLOW_19_in_extends_347); 
@@ -627,19 +627,19 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "function"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:42:1: function : '(' 'function' ID ( input | output | object )* ')' ;
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:42:1: function : '(' 'function' ID ( input | output | object )* ')' ;
 	public final void function() throws RecognitionException {
 		Token ID3=null;
 
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:42:10: ( '(' 'function' ID ( input | output | object )* ')' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:42:12: '(' 'function' ID ( input | output | object )* ')'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:42:10: ( '(' 'function' ID ( input | output | object )* ')' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:42:12: '(' 'function' ID ( input | output | object )* ')'
 			{
 			match(input,8,FOLLOW_8_in_function358); 
 			match(input,20,FOLLOW_20_in_function360); 
 			ID3=(Token)match(input,ID,FOLLOW_ID_in_function362); 
 			FunctionDefinition fun = new FunctionDefinition((ID3!=null?ID3.getText():null)); String oldPackage = curPackage; curPackage = (curPackage != null ? curPackage + "." : "") + (ID3!=null?ID3.getText():null); PackageDefinition pack = new PackageDefinition(curPackage + ".inner");
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:43:13: ( input | output | object )*
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:43:13: ( input | output | object )*
 			loop9:
 			while (true) {
 				int alt9=4;
@@ -673,7 +673,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 				switch (alt9) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:43:15: input
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:43:15: input
 					{
 					pushFollow(FOLLOW_input_in_function380);
 					input();
@@ -683,7 +683,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 2 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:44:15: output
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:44:15: output
 					{
 					pushFollow(FOLLOW_output_in_function397);
 					output();
@@ -693,7 +693,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 3 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:45:15: object
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:45:15: object
 					{
 					pushFollow(FOLLOW_object_in_function414);
 					object();
@@ -726,13 +726,13 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "uniontype"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:48:1: uniontype : '(' 'uniontype' ID ')' ;
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:48:1: uniontype : '(' 'uniontype' ID ')' ;
 	public final void uniontype() throws RecognitionException {
 		Token ID4=null;
 
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:48:11: ( '(' 'uniontype' ID ')' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:48:13: '(' 'uniontype' ID ')'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:48:11: ( '(' 'uniontype' ID ')' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:48:13: '(' 'uniontype' ID ')'
 			{
 			match(input,8,FOLLOW_8_in_uniontype454); 
 			match(input,31,FOLLOW_31_in_uniontype456); 
@@ -755,13 +755,13 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "typedef"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:49:1: typedef : ( '(' 'partial' 'function' ID ')' | '(' 'type' ID type ')' );
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:49:1: typedef : ( '(' 'partial' 'function' ID ')' | '(' 'type' ID type ')' );
 	public final void typedef() throws RecognitionException {
 		Token ID5=null;
 		Token ID6=null;
 
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:49:9: ( '(' 'partial' 'function' ID ')' | '(' 'type' ID type ')' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:49:9: ( '(' 'partial' 'function' ID ')' | '(' 'type' ID type ')' )
 			int alt10=2;
 			int LA10_0 = input.LA(1);
 			if ( (LA10_0==8) ) {
@@ -795,7 +795,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 			switch (alt10) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:49:11: '(' 'partial' 'function' ID ')'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:49:11: '(' 'partial' 'function' ID ')'
 					{
 					match(input,8,FOLLOW_8_in_typedef469); 
 					match(input,26,FOLLOW_26_in_typedef471); 
@@ -806,7 +806,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 2 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:50:11: '(' 'type' ID type ')'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:50:11: '(' 'type' ID type ')'
 					{
 					match(input,8,FOLLOW_8_in_typedef491); 
 					match(input,30,FOLLOW_30_in_typedef493); 
@@ -835,13 +835,13 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "replaceable_type"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:52:1: replaceable_type : '(' 'replaceable' 'type' ID ')' ;
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:52:1: replaceable_type : '(' 'replaceable' 'type' ID ')' ;
 	public final void replaceable_type() throws RecognitionException {
 		Token ID7=null;
 
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:52:18: ( '(' 'replaceable' 'type' ID ')' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:52:20: '(' 'replaceable' 'type' ID ')'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:52:18: ( '(' 'replaceable' 'type' ID ')' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:52:20: '(' 'replaceable' 'type' ID ')'
 			{
 			match(input,8,FOLLOW_8_in_replaceable_type509); 
 			match(input,28,FOLLOW_28_in_replaceable_type511); 
@@ -865,12 +865,12 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "type"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:54:1: type : ( basetype | complextype | '[' INT type | fqid );
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:54:1: type : ( basetype | complextype | '[' INT type | fqid );
 	public final void type() throws RecognitionException {
 		Token INT8=null;
 
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:54:6: ( basetype | complextype | '[' INT type | fqid )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:54:6: ( basetype | complextype | '[' INT type | fqid )
 			int alt11=4;
 			switch ( input.LA(1) ) {
 			case 13:
@@ -906,7 +906,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 			}
 			switch (alt11) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:54:8: basetype
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:54:8: basetype
 					{
 					pushFollow(FOLLOW_basetype_in_type527);
 					basetype();
@@ -915,7 +915,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 2 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:55:8: complextype
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:55:8: complextype
 					{
 					pushFollow(FOLLOW_complextype_in_type536);
 					complextype();
@@ -924,7 +924,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 3 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:56:8: '[' INT type
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:56:8: '[' INT type
 					{
 					match(input,18,FOLLOW_18_in_type545); 
 					INT8=(Token)match(input,INT,FOLLOW_INT_in_type547); 
@@ -936,7 +936,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 4 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:57:8: fqid
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:57:8: fqid
 					{
 					pushFollow(FOLLOW_fqid_in_type560);
 					fqid();
@@ -961,13 +961,13 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "varDef"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:58:1: varDef : type ID ;
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:58:1: varDef : type ID ;
 	public final void varDef() throws RecognitionException {
 		Token ID9=null;
 
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:58:8: ( type ID )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:58:10: type ID
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:58:8: ( type ID )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:58:10: type ID
 			{
 			pushFollow(FOLLOW_type_in_varDef569);
 			type();
@@ -991,11 +991,11 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "input"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:59:1: input : '(' 'input' varDef ')' ;
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:59:1: input : '(' 'input' varDef ')' ;
 	public final void input() throws RecognitionException {
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:59:8: ( '(' 'input' varDef ')' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:59:10: '(' 'input' varDef ')'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:59:8: ( '(' 'input' varDef ')' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:59:10: '(' 'input' varDef ')'
 			{
 			match(input,8,FOLLOW_8_in_input581); 
 			match(input,21,FOLLOW_21_in_input583); 
@@ -1020,11 +1020,11 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "output"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:60:1: output : '(' 'output' varDef ')' ;
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:60:1: output : '(' 'output' varDef ')' ;
 	public final void output() throws RecognitionException {
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:60:8: ( '(' 'output' varDef ')' )
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:60:10: '(' 'output' varDef ')'
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:60:8: ( '(' 'output' varDef ')' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:60:10: '(' 'output' varDef ')'
 			{
 			match(input,8,FOLLOW_8_in_output594); 
 			match(input,24,FOLLOW_24_in_output596); 
@@ -1049,10 +1049,10 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "basetype"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:61:1: basetype : ( 'Integer' | 'Real' | 'Boolean' | 'String' );
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:61:1: basetype : ( 'Integer' | 'Real' | 'Boolean' | 'String' );
 	public final void basetype() throws RecognitionException {
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:61:10: ( 'Integer' | 'Real' | 'Boolean' | 'String' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:61:10: ( 'Integer' | 'Real' | 'Boolean' | 'String' )
 			int alt12=4;
 			switch ( input.LA(1) ) {
 			case 14:
@@ -1082,28 +1082,28 @@ public class OMCorbaDefinitionsParser extends Parser {
 			}
 			switch (alt12) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:61:12: 'Integer'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:61:12: 'Integer'
 					{
 					match(input,14,FOLLOW_14_in_basetype607); 
 					memory = new ComplexTypeDefinition(ComplexTypeDefinition.ComplexType.BUILT_IN, "ModelicaInteger");
 					}
 					break;
 				case 2 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:62:12: 'Real'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:62:12: 'Real'
 					{
 					match(input,16,FOLLOW_16_in_basetype622); 
 					memory = new ComplexTypeDefinition(ComplexTypeDefinition.ComplexType.BUILT_IN, "ModelicaReal");
 					}
 					break;
 				case 3 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:63:12: 'Boolean'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:63:12: 'Boolean'
 					{
 					match(input,13,FOLLOW_13_in_basetype637); 
 					memory = new ComplexTypeDefinition(ComplexTypeDefinition.ComplexType.BUILT_IN, "ModelicaBoolean");
 					}
 					break;
 				case 4 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:64:12: 'String'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:64:12: 'String'
 					{
 					match(input,17,FOLLOW_17_in_basetype652); 
 					memory = new ComplexTypeDefinition(ComplexTypeDefinition.ComplexType.BUILT_IN, "ModelicaString");
@@ -1125,10 +1125,10 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "complextype"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:65:1: complextype : ( ( 'list' ) '<' type '>' | ( 'tuple' ) '<' type ( ',' type )+ '>' | ( 'Option' ) '<' type '>' );
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:65:1: complextype : ( ( 'list' ) '<' type '>' | ( 'tuple' ) '<' type ( ',' type )+ '>' | ( 'Option' ) '<' type '>' );
 	public final void complextype() throws RecognitionException {
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:65:13: ( ( 'list' ) '<' type '>' | ( 'tuple' ) '<' type ( ',' type )+ '>' | ( 'Option' ) '<' type '>' )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:65:13: ( ( 'list' ) '<' type '>' | ( 'tuple' ) '<' type ( ',' type )+ '>' | ( 'Option' ) '<' type '>' )
 			int alt14=3;
 			switch ( input.LA(1) ) {
 			case 22:
@@ -1153,10 +1153,10 @@ public class OMCorbaDefinitionsParser extends Parser {
 			}
 			switch (alt14) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:66:8: ( 'list' ) '<' type '>'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:66:8: ( 'list' ) '<' type '>'
 					{
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:66:8: ( 'list' )
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:66:9: 'list'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:66:8: ( 'list' )
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:66:9: 'list'
 					{
 					match(input,22,FOLLOW_22_in_complextype672); 
 					}
@@ -1173,10 +1173,10 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 2 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:68:8: ( 'tuple' ) '<' type ( ',' type )+ '>'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:68:8: ( 'tuple' ) '<' type ( ',' type )+ '>'
 					{
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:68:8: ( 'tuple' )
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:68:9: 'tuple'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:68:8: ( 'tuple' )
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:68:9: 'tuple'
 					{
 					match(input,29,FOLLOW_29_in_complextype702); 
 					}
@@ -1188,7 +1188,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 					state._fsp--;
 
 					def.add((ComplexTypeDefinition)memory);
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:69:59: ( ',' type )+
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:69:59: ( ',' type )+
 					int cnt13=0;
 					loop13:
 					while (true) {
@@ -1200,7 +1200,7 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 						switch (alt13) {
 						case 1 :
-							// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:69:60: ',' type
+							// org/openmodelica/corba/parser/OMCorbaDefinitions.g:69:60: ',' type
 							{
 							match(input,10,FOLLOW_10_in_complextype721); 
 							pushFollow(FOLLOW_type_in_complextype723);
@@ -1224,10 +1224,10 @@ public class OMCorbaDefinitionsParser extends Parser {
 					}
 					break;
 				case 3 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:70:8: ( 'Option' ) '<' type '>'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:70:8: ( 'Option' ) '<' type '>'
 					{
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:70:8: ( 'Option' )
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:70:9: 'Option'
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:70:8: ( 'Option' )
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:70:9: 'Option'
 					{
 					match(input,15,FOLLOW_15_in_complextype741); 
 					}
@@ -1259,13 +1259,13 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 
 	// $ANTLR start "fqid"
-	// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:72:1: fqid : ( ID | QID );
+	// org/openmodelica/corba/parser/OMCorbaDefinitions.g:72:1: fqid : ( ID | QID );
 	public final void fqid() throws RecognitionException {
 		Token ID10=null;
 		Token QID11=null;
 
 		try {
-			// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:72:6: ( ID | QID )
+			// org/openmodelica/corba/parser/OMCorbaDefinitions.g:72:6: ( ID | QID )
 			int alt15=2;
 			int LA15_0 = input.LA(1);
 			if ( (LA15_0==ID) ) {
@@ -1283,14 +1283,14 @@ public class OMCorbaDefinitionsParser extends Parser {
 
 			switch (alt15) {
 				case 1 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:72:8: ID
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:72:8: ID
 					{
 					ID10=(Token)match(input,ID,FOLLOW_ID_in_fqid768); 
 					memory = (ID10!=null?ID10.getText():null);
 					}
 					break;
 				case 2 :
-					// org\\openmodelica\\corba\\parser\\OMCorbaDefinitions.g:73:8: QID
+					// org/openmodelica/corba/parser/OMCorbaDefinitions.g:73:8: QID
 					{
 					QID11=(Token)match(input,QID,FOLLOW_QID_in_fqid779); 
 					memory = (QID11!=null?QID11.getText():null);

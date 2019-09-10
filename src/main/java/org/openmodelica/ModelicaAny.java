@@ -114,9 +114,12 @@ public class ModelicaAny {
   }
 
   /**
-   * Returns true if the value is a Real, else returns an Integer
+ * @param r reader from which Int or Real will be parsed
+ * @param b Stringbuilder that will contain Int or Real (as string)
+ * @return  true if the value is a Real, else returns an Integer
+ * @throws IOException in case of any reader error
    */
-  public static boolean parseIntOrReal(Reader r, StringBuilder b) throws ParseException, IOException {
+  public static boolean parseIntOrReal(Reader r, StringBuilder b) throws  IOException {
     boolean bool = false;
     int i;
     char ch;

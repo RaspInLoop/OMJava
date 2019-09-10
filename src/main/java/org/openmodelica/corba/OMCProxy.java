@@ -477,6 +477,7 @@ public class OMCProxy
    * Send expression to OMC. If communication is not initialized, it
    * is initialized here.
    * @param exp the expression to send to OMC
+   * @return Result
    * @throws ConnectException if we're unable to start communicating with
    * the server
    */
@@ -587,9 +588,7 @@ public class OMCProxy
    * @return a <code>List</code> of subclasses defined (and loaded into OMC)
    * inside the class named className.
    *
-   * @throws ConnectException
-   * @throws UnexpectedReplyException
-   * @throws InitializationException
+   * @throws ConnectException if we're unable to start communicating with the server
    */
   public Result getClassNames(String className) throws ConnectException
   {
@@ -601,7 +600,7 @@ public class OMCProxy
    *
    * @param className fully qualified class name
    * @return the type of restriction of the class
-   * @throws ConnectException
+   * @throws ConnectException if we're unable to start communicating with the server
    */
   public Result getRestriction(String className) throws ConnectException
   {
@@ -614,9 +613,7 @@ public class OMCProxy
    * @param file the file we want to load
    * @return a <code>ParseResult</code> containing the classes found in the
    * file and the error messages from OMC
-   * @throws ConnectException
-   * @throws UnexpectedReplyException
-   * @throws InitializationException
+   * @throws ConnectException if we're unable to start communicating with the server
    */
   public Result loadSourceFile(String file) throws ConnectException
   {
@@ -629,8 +626,8 @@ public class OMCProxy
    * @param className the element we want to get location of
    * @return an <code>ElementLocation</code> containing the file, starting and
    * ending line number and column number of the given class
-   * @throws ConnectException
-   * @throws InvocationError
+   * @throws ConnectException if we're unable to start communicating with the server
+   * @throws InvocationError if the server return an error
    */
   public Result getClassLocation(String className) throws ConnectException, InvocationError
   {
@@ -661,7 +658,7 @@ public class OMCProxy
    *
    * @param className fully qualified name of the class/package
    * @return true if className is a package, false otherwise
-   * @throws ConnectException
+   * @throws ConnectException  if we're unable to start communicating with the server
    */
   public boolean isPackage(String className)
   throws ConnectException
@@ -676,8 +673,9 @@ public class OMCProxy
    * @param className the fully qualified name of a class
    * @return a <code>Collection</code> (of <code>ElementsInfo</code>)
    * containing the information about className
+   * @throws ConnectException   if we're unable to start communicating with the server
    */
-  public Result getElements(String className)	throws ConnectException, InvocationError
+  public Result getElements(String className)	throws ConnectException
   {
     return sendExpression("getElementsInfo("+ className +")");
   }
@@ -700,6 +698,7 @@ public class OMCProxy
   /**
    * Loads in the Modelica System Library and returns names of the top-level
    * packages.
+   * @return name of parent package
    *
    * @throws ConnectException if we're unable to start communicating with
    * the server

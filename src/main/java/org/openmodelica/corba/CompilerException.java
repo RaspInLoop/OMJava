@@ -75,6 +75,7 @@ abstract public class CompilerException extends Exception
 	}
 
 	/**
+	 * @param e inner exception
 	 * @see Exception#Exception(java.lang.Throwable)
 	 */
 	public CompilerException(Exception e)
