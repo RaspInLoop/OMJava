@@ -54,6 +54,7 @@ abstract public class CompilerException extends Exception
 
 
 	/**
+	 * @param message the explanation
 	 * @see Exception#Exception(java.lang.String)
 	 */
 	public CompilerException(String message)
