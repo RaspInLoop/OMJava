@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.raspinloop.openmodelica</groupId>
 	<artifactId>OMJava</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 
 	<build>
 		<plugins>
@@ -83,14 +83,6 @@
 			  <artifactId>versions-maven-plugin</artifactId>
 			  <version>2.5</version>
 			</plugin>
-			<plugin>
-			  <groupId>org.apache.maven.plugins</groupId>
-			  <artifactId>maven-javadoc-plugin</artifactId>
-			  <version>3.0.0</version>
-			  <configuration>
-			    <skip>true</skip>
-			  </configuration>
-			</plugin> 
 		</plugins>
 	</build>
 
@@ -108,7 +100,6 @@
 	    <connection>scm:git:git://github.com/RaspInLoop/OMJava.git</connection>
 	    <developerConnection>scm:git:git@github.com:RaspInLoop/OMJava.git</developerConnection>
 	    <url>https://github.com/RaspInLoop/OMJava</url>
-	  <tag>OMJava-0.0.2</tag>
   </scm>
 	<dependencies>
 		<dependency>

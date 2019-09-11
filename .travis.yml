@@ -20,17 +20,18 @@ env:
     - secure: "xCWEsJsgbsr41ptwkzmLw7WokhDbB+R9mMU5ehpbj0lyCdwGfE3DWJTEj0CkTpIpFhQvWKP/izXyuUUYO7vtgGo7I4UkM92RUOJmF+PQhjJOeKOydJHkIzIya6wJ80p9lTolm/u0xKLnFuXHFPjG6UxfJ4PKyzHbAi31MQUCbY8reHWkheSNU8IhHa5nVRXaydgbs4uRkvel9AybCQD3Rs6rVSk+9nhJdCex0mls8jLZ54bWLN37nh3q0trT+iUZOpy8dtLGQQ5qtzc+X9OLSmzYP3ppnXEyIA/lNpGVvKWGaUMsB/euEuSsUhK2LdNDB72Ye6ZtBkDfGrqJIKmwmCYYq2knkn9ll9vI9n2v22vC6CGQVSqGodzCGZaSn7LqOTq3I1LuwYwZQPIUEy0qPcp1oGrIHn3PMQ6zKNdqm7ECG8XRFFC5wKK9zyNNk6z+GtGsNjPK/yWzdXTqWCgMDLs+BYspYrZZ7aErgvvD6ombTPor7SsBk6LjmcijcD/lcwVF4dvPPWJu4htmsbCvJ/S5YXgBanX1PtclmyBPjWfM4T8YDQKKE4I5xN64Gh1R/TyJYA6zo2mf4SClW11JCOoKb4Dht4GM9oH7QGnCBYS3vwQbCzqkvLX5VTYKPQnmh+sayIsP9055D2GCGweeZ1WvfHMyEGCChgVjBeguQeI="
     - secure: "JHQMU9THtHa+V8CQXeiLbpBZD0aw2FYNIB0R2Ja7AwkM8qbcCyI+wGTu5swuMegrxPHnbi8bxbqR3S4X2tTkGH0nUOtAXKCrQPiuLQkmv0hVOIVlG7fYype5B0Siu/5bucblC6KHv+TWeP4hP0v7giQ7S41sb1RcNpaGbeeE2uURDgFNnErXcgyYN2T2keut0a/H7Z7CJyBrhAAMwn2FhguoslCVVD00woPrtcfLF4mpss3v4USxAr66uY7Qyn7RbqblB2arltD7Y2bIhmC6zqYJatfAn5cnM6q7CUZhkK423PkEw/6Z1clNeqqKnPPLPL5dJ11Mbo7c+SRJL6Au37FKQNtoCgvmh/s7k4TwymYlhnvz6ZAeef7/atAPTL1JdCmmG56W/6B6pwKe9B1jpHfqNLswjhhMmeNbJQKpEj16dyiYt9J94bGdmOBD0XsJDRqWAN8swzsTCJxV6bBjFWjXEauqxYgyYNoTTAC/FNAy/IQ6WyLp5WX5WUZmIxVacY7RLor/J/bteY1pBoZRlviDRuzobVfzpSvryVAwvIq8cggWcAvwN9v+hYUcHmly5SUUkuRT88WWrobY0sxsuMAA4g+F+KSJk2nRnT4M5f/aW9kFrYSVRc5s9V8hnI8NFA1FLiL8+lkm27/AZLPORTIxyIvB6d273Q4oN6ZofmU="
 script:
-  - mvn deploy -B --settings mvnsettings.xml -Dgpg.skip
+  - mvn clean verify --settings mvnsettings.xml
 before_deploy:
   - mvn help:evaluate -N -Dexpression=project.version | grep -v '\['
   - export project_version=$(mvn help:evaluate -N -Dexpression=project.version | grep -v '\[')
+  - mvn deploy -B --settings mvnsettings.xml
 
 deploy:
   provider: releases
   api_key:
     secure: DFAKRA8zSwM3d4pMm7Mkye6rrgjv6PD1ExyZBKawX4bTGAefFcdiE35bUR+AViskongLtTMyThmtxkMYSm9f9+tYwN3Age6sqZiiZO9MxhCkgA60Z605KQKLlEavGYJQQhsXur9IEQ71hG5x401er6q7WFwAukS9HYkDEIONjNGGsSIhZHPZfPJU5c0TwzJHZLnYnHUWS0bbZ878UeNme7fwDGh968DEPGvvRPJ9ELxzOO52xv0BafKbtdMwxyercB/TBEoA8RNjzlZEHnSAvr2RHfhVKn/E23Yl3tW5OdY6nG2AgH+83PGAjWORmmlvRM9+ITBR/L8X/NE03aXHTz1BG7o/UONmILjmbz9U+PniTAFH+xcsWTMtDGF3hUkvzKj8tJ8GugB2MYcfkWm2gUAPuBWkH5z4Hb6nffXKYVEMy5E5fjUdDSlXKhLbMOVf6JwlJYOi7Y7z1YUKj0w01+DzLl2Ia1YBaUAIP1S4lwEGbc93S1ZNlWGhkHLY01xeBANSRZVC7BcUQM0EFHBLog/oh8hiG8rHIK0SQm9JXoc+mhfOWuvg+vsRP9YklRENui7PfR0Zwd8PYrQE5/VDygenpLt0rd0OOHtNDu6lMK8YAR9iucPGpRglZfxk7wrjd8fonW0ywwB6SBiAZYywX6gLZ1sNZ4MhbKvAUP2plI8=
   file_glob: true
-  file: "/**/OMJava-$project_version.jar"
+  file: "/**/OMJava-$project_version*.jar"
   skip_cleanup: true
   overwrite: true
   draft: true
