@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.raspinloop.openmodelica</groupId>
 	<artifactId>OMJava</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.3</version>
 
 	<build>
 		<plugins>
@@ -100,6 +100,7 @@
 	    <connection>scm:git:git://github.com/RaspInLoop/OMJava.git</connection>
 	    <developerConnection>scm:git:git@github.com:RaspInLoop/OMJava.git</developerConnection>
 	    <url>https://github.com/RaspInLoop/OMJava</url>
+    <tag>0.0.3</tag>
   </scm>
 	<dependencies>
 		<dependency>
