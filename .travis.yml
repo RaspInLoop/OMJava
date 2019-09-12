@@ -8,9 +8,8 @@ before_install:
   - sudo apt-get install openmodelica
   - sudo apt-get install omc-java
   - sudo apt-get install omlib-modelica-3.2.2
-  - export GPG_TTY=$(tty)
-  - echo $GPG_SECRET_KEYS | base64 --decode | gpg2 --import
-  - echo $GPG_OWNERTRUST | base64 --decode | gpg2 --import-ownertrust
+  - echo $GPG_SECRET_KEYS | base64 --decode | gpg2 --batch --import
+  - echo $GPG_OWNERTRUST | base64 --decode | gpg2 --batch --import-ownertrust
 
 cache:
   directories:
