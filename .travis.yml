@@ -1,32 +1,34 @@
 language: java
 install: true
+dist: bionic
+
 before_install:
-- for deb in deb deb-src; do echo "$deb http://build.openmodelica.org/apt `lsb_release
-  -cs` release"; done | sudo tee /etc/apt/sources.list.d/openmodelica.list
-- wget -q http://build.openmodelica.org/apt/openmodelica.asc -O- | sudo apt-key add
-  -
-- sudo apt-get update
-- sudo apt-get install openmodelica
-- sudo apt-get install omc-java
-- sudo apt-get install omlib-modelica-3.2.2
-- echo $GPG_SECRET_KEYS | base64 --decode | gpg2 --batch --import
-- echo $GPG_OWNERTRUST | base64 --decode | gpg2 --batch --import-ownertrust
+  - for deb in deb deb-src; do echo "$deb http://build.openmodelica.org/apt `lsb_release -cs` release"; done | sudo tee /etc/apt/sources.list.d/openmodelica.list
+  - wget -q http://build.openmodelica.org/apt/openmodelica.asc -O- | sudo apt-key add - 
+  - sudo apt-get update
+  - sudo apt-get install openmodelica
+  - sudo apt-get install omc-java
+  - sudo apt-get install omlib-modelica-3.2.2
+  - echo $GPG_SECRET_KEYS | base64 --decode | gpg2 --batch --import
+  - echo $GPG_OWNERTRUST | base64 --decode | gpg2 --batch --import-ownertrust
+
 cache:
   directories:
-  - "$HOME/.m2"
+  - $HOME/.m2
+
 env:
   global:
-  - OPENMODELICAHOME=/usr/
-  - secure: WkcuSM6+n9WUW5BmvhJ/op6M7WHF8NRsF3RBb9bTTsDZrPi+2iLvdu06ReYR+lk5/Gx9DFYcjArmmGut55KtmTRsRM8ocDDqZJsy1XqsiPMupOJ5F6rFJOinQk0j/inrKrsNPy5NlNh4IyjL9CQ4IKsWPa88AJ3VUqCsy3gBJBW+Yuz04ZUDwtE2zo8jbBflSJa9arbARgr9dl4X5ywwTpbpviG0zLJIx3yJPUITEXXs1Ua/jPml3IshsBifQxjgJSHNrV7h0jsjJ1hQeCAgsP1TVqirFS0dcna3XaIk/LWAJEO3N1LZULuY5eH+2qahZD27v+9K8Yj6b9cTAhYwzV94GwSmGZvPkw6Dr1sYaOmPIUvEuZSCWEC3XFhzyZyvDqDJf3VDw2KxZDNRthABZm4mJOyF/fbyNkOND0pwg5vks1gQ/f+2irLw3Sj2xGoTRnwh5zqA/gahY/cErKifphNun79vA5TzValz31eD+UKPWjZ3dXLATjGzQkEap3UvhV6ymY+tMSHeLPx/LLqt0Xoy0TU4aUJJl4ArCxo3ORIjpney78dslBqV5P6WN0vdKcX2u7MuU6A+qVjrN9M33m6sQCzdkep73YgXC5PsxxuC54r/oabmaTiJRi1yxazCH5ZN7FdPSz6QmWIcyVciqd8XyO1RYh3YDgDecbQ77qY=
-  - secure: xCWEsJsgbsr41ptwkzmLw7WokhDbB+R9mMU5ehpbj0lyCdwGfE3DWJTEj0CkTpIpFhQvWKP/izXyuUUYO7vtgGo7I4UkM92RUOJmF+PQhjJOeKOydJHkIzIya6wJ80p9lTolm/u0xKLnFuXHFPjG6UxfJ4PKyzHbAi31MQUCbY8reHWkheSNU8IhHa5nVRXaydgbs4uRkvel9AybCQD3Rs6rVSk+9nhJdCex0mls8jLZ54bWLN37nh3q0trT+iUZOpy8dtLGQQ5qtzc+X9OLSmzYP3ppnXEyIA/lNpGVvKWGaUMsB/euEuSsUhK2LdNDB72Ye6ZtBkDfGrqJIKmwmCYYq2knkn9ll9vI9n2v22vC6CGQVSqGodzCGZaSn7LqOTq3I1LuwYwZQPIUEy0qPcp1oGrIHn3PMQ6zKNdqm7ECG8XRFFC5wKK9zyNNk6z+GtGsNjPK/yWzdXTqWCgMDLs+BYspYrZZ7aErgvvD6ombTPor7SsBk6LjmcijcD/lcwVF4dvPPWJu4htmsbCvJ/S5YXgBanX1PtclmyBPjWfM4T8YDQKKE4I5xN64Gh1R/TyJYA6zo2mf4SClW11JCOoKb4Dht4GM9oH7QGnCBYS3vwQbCzqkvLX5VTYKPQnmh+sayIsP9055D2GCGweeZ1WvfHMyEGCChgVjBeguQeI=
-  - secure: nPux5ar3DnP1IPVVPBEQnj81MxC3999Jboe9IgN1tUGr1RkBgJrVOU276SCr2y5AtYxPZBrPsZorM+qu76ZRhGqriTtdknZJTn+ry9zI97qKQww1o4Uux0iY9A7NoDqScFZ24r1ETDnvcI27e9p5h/4ZmcAkz/TEkz4jnNKtl0+vCHGbdgsSFZlv5piYSMGfbJ2wqG5ONJPwQWN+XYn8cydgmTDvDS03lCgO3PIG4l5Pg78v3KYXTDcdmWBQ7JYveY41f8QuIHiA6PJ7GIurMBwUCe1Jfr2tSuQ0azfPnU9ha84TOuPGsaIkRkRsPzvO5dV+JayrkFrwXURXLqI13hg3T1NFptREEjYNRe8vgmP7i0HMVlK7GONgxXhus7T/zM6FJ69lQxfpXDGHps2OnsvRuzgDLCtC2iqEzeGRd2jDGyvkUaY10ykAKag/ej1AOHNlq5GtBPie/2vxhPqO0AVT/1vTZy4hh3UQn2LWaQqT30fvlTQ2gSstbxG5VvVMPCAXTPllU1iUEgTJkMYNYBWiVwRblk39elWLZM0Gxi6e6DHEzzZy7Ew2XWztUft1frysoKkXdcTSiEPgk0jPfJhVdHVhwBVu1mhIPQWw/eVPmBtxtolCX5YG5u32plejiwf/Y/LZvSlIzxdb+fM6Qj20l+xWfJxxezjv0cIfeqA=
+    - OPENMODELICAHOME=/usr/
+    - secure: "WkcuSM6+n9WUW5BmvhJ/op6M7WHF8NRsF3RBb9bTTsDZrPi+2iLvdu06ReYR+lk5/Gx9DFYcjArmmGut55KtmTRsRM8ocDDqZJsy1XqsiPMupOJ5F6rFJOinQk0j/inrKrsNPy5NlNh4IyjL9CQ4IKsWPa88AJ3VUqCsy3gBJBW+Yuz04ZUDwtE2zo8jbBflSJa9arbARgr9dl4X5ywwTpbpviG0zLJIx3yJPUITEXXs1Ua/jPml3IshsBifQxjgJSHNrV7h0jsjJ1hQeCAgsP1TVqirFS0dcna3XaIk/LWAJEO3N1LZULuY5eH+2qahZD27v+9K8Yj6b9cTAhYwzV94GwSmGZvPkw6Dr1sYaOmPIUvEuZSCWEC3XFhzyZyvDqDJf3VDw2KxZDNRthABZm4mJOyF/fbyNkOND0pwg5vks1gQ/f+2irLw3Sj2xGoTRnwh5zqA/gahY/cErKifphNun79vA5TzValz31eD+UKPWjZ3dXLATjGzQkEap3UvhV6ymY+tMSHeLPx/LLqt0Xoy0TU4aUJJl4ArCxo3ORIjpney78dslBqV5P6WN0vdKcX2u7MuU6A+qVjrN9M33m6sQCzdkep73YgXC5PsxxuC54r/oabmaTiJRi1yxazCH5ZN7FdPSz6QmWIcyVciqd8XyO1RYh3YDgDecbQ77qY="
+    - secure: "xCWEsJsgbsr41ptwkzmLw7WokhDbB+R9mMU5ehpbj0lyCdwGfE3DWJTEj0CkTpIpFhQvWKP/izXyuUUYO7vtgGo7I4UkM92RUOJmF+PQhjJOeKOydJHkIzIya6wJ80p9lTolm/u0xKLnFuXHFPjG6UxfJ4PKyzHbAi31MQUCbY8reHWkheSNU8IhHa5nVRXaydgbs4uRkvel9AybCQD3Rs6rVSk+9nhJdCex0mls8jLZ54bWLN37nh3q0trT+iUZOpy8dtLGQQ5qtzc+X9OLSmzYP3ppnXEyIA/lNpGVvKWGaUMsB/euEuSsUhK2LdNDB72Ye6ZtBkDfGrqJIKmwmCYYq2knkn9ll9vI9n2v22vC6CGQVSqGodzCGZaSn7LqOTq3I1LuwYwZQPIUEy0qPcp1oGrIHn3PMQ6zKNdqm7ECG8XRFFC5wKK9zyNNk6z+GtGsNjPK/yWzdXTqWCgMDLs+BYspYrZZ7aErgvvD6ombTPor7SsBk6LjmcijcD/lcwVF4dvPPWJu4htmsbCvJ/S5YXgBanX1PtclmyBPjWfM4T8YDQKKE4I5xN64Gh1R/TyJYA6zo2mf4SClW11JCOoKb4Dht4GM9oH7QGnCBYS3vwQbCzqkvLX5VTYKPQnmh+sayIsP9055D2GCGweeZ1WvfHMyEGCChgVjBeguQeI="
+    - secure: nPux5ar3DnP1IPVVPBEQnj81MxC3999Jboe9IgN1tUGr1RkBgJrVOU276SCr2y5AtYxPZBrPsZorM+qu76ZRhGqriTtdknZJTn+ry9zI97qKQww1o4Uux0iY9A7NoDqScFZ24r1ETDnvcI27e9p5h/4ZmcAkz/TEkz4jnNKtl0+vCHGbdgsSFZlv5piYSMGfbJ2wqG5ONJPwQWN+XYn8cydgmTDvDS03lCgO3PIG4l5Pg78v3KYXTDcdmWBQ7JYveY41f8QuIHiA6PJ7GIurMBwUCe1Jfr2tSuQ0azfPnU9ha84TOuPGsaIkRkRsPzvO5dV+JayrkFrwXURXLqI13hg3T1NFptREEjYNRe8vgmP7i0HMVlK7GONgxXhus7T/zM6FJ69lQxfpXDGHps2OnsvRuzgDLCtC2iqEzeGRd2jDGyvkUaY10ykAKag/ej1AOHNlq5GtBPie/2vxhPqO0AVT/1vTZy4hh3UQn2LWaQqT30fvlTQ2gSstbxG5VvVMPCAXTPllU1iUEgTJkMYNYBWiVwRblk39elWLZM0Gxi6e6DHEzzZy7Ew2XWztUft1frysoKkXdcTSiEPgk0jPfJhVdHVhwBVu1mhIPQWw/eVPmBtxtolCX5YG5u32plejiwf/Y/LZvSlIzxdb+fM6Qj20l+xWfJxxezjv0cIfeqA=
 script:
-- mvn clean verify --settings mvnsettings.xml -Dgpg.skip
+  - mvn clean verify --settings mvnsettings.xml -Dgpg.skip
 before_deploy:
-- mvn help:evaluate -N -Dexpression=project.version | grep -v '\['
-- export project_version=$(mvn help:evaluate -N -Dexpression=project.version | grep
-  -v '\[')
-- mvn deploy -B --settings mvnsettings.xml
+  - mvn help:evaluate -N -Dexpression=project.version | grep -v '\['
+  - export project_version=$(mvn help:evaluate -N -Dexpression=project.version | grep -v '\[')
+  - mvn deploy -B --settings mvnsettings.xml
+
 deploy:
   provider: releases
   api_key:
@@ -39,4 +41,4 @@ deploy:
   on:
     repo: RaspInLoop/OMJava
     tag: true
-  name: "$project_version"
+  name: $project_version
