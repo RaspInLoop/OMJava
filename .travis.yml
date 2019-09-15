@@ -1,42 +1,13 @@
+language: java
+install: true
+dist: bionic
+before_install:
+- openssl aes-256-cbc -K $encrypted_4a163bf52816_key -iv $encrypted_4a163bf52816_iv
+  -in deployment/signingkey.asc.enc -out deployment/signingkey.asc -d
+- for deb in deb deb-src; do echo "$deb http://build.openmodelica.org/apt `lsb_release
+  -cs` release"; done | sudo tee /etc/apt/sources.list.d/openmodelica.list
+- wget -q http://build.openmodelica.org/apt/openmodelica.asc -O- | sudo apt-key add
   -
-- sudo apt-get update
-- sudo apt-get install openmodelica
-- sudo apt-get install omc-java
-- sudo apt-get install omlib-modelica-3.2.2
-cache:
-  directories:
-  - "$HOME/.m2"
-env:
-  global:
-  - OPENMODELICAHOME=/usr/
-  - secure: WkcuSM6+n9WUW5BmvhJ/op6M7WHF8NRsF3RBb9bTTsDZrPi+2iLvdu06ReYR+lk5/Gx9DFYcjArmmGut55KtmTRsRM8ocDDqZJsy1XqsiPMupOJ5F6rFJOinQk0j/inrKrsNPy5NlNh4IyjL9CQ4IKsWPa88AJ3VUqCsy3gBJBW+Yuz04ZUDwtE2zo8jbBflSJa9arbARgr9dl4X5ywwTpbpviG0zLJIx3yJPUITEXXs1Ua/jPml3IshsBifQxjgJSHNrV7h0jsjJ1hQeCAgsP1TVqirFS0dcna3XaIk/LWAJEO3N1LZULuY5eH+2qahZD27v+9K8Yj6b9cTAhYwzV94GwSmGZvPkw6Dr1sYaOmPIUvEuZSCWEC3XFhzyZyvDqDJf3VDw2KxZDNRthABZm4mJOyF/fbyNkOND0pwg5vks1gQ/f+2irLw3Sj2xGoTRnwh5zqA/gahY/cErKifphNun79vA5TzValz31eD+UKPWjZ3dXLATjGzQkEap3UvhV6ymY+tMSHeLPx/LLqt0Xoy0TU4aUJJl4ArCxo3ORIjpney78dslBqV5P6WN0vdKcX2u7MuU6A+qVjrN9M33m6sQCzdkep73YgXC5PsxxuC54r/oabmaTiJRi1yxazCH5ZN7FdPSz6QmWIcyVciqd8XyO1RYh3YDgDecbQ77qY=
-  - secure: xCWEsJsgbsr41ptwkzmLw7WokhDbB+R9mMU5ehpbj0lyCdwGfE3DWJTEj0CkTpIpFhQvWKP/izXyuUUYO7vtgGo7I4UkM92RUOJmF+PQhjJOeKOydJHkIzIya6wJ80p9lTolm/u0xKLnFuXHFPjG6UxfJ4PKyzHbAi31MQUCbY8reHWkheSNU8IhHa5nVRXaydgbs4uRkvel9AybCQD3Rs6rVSk+9nhJdCex0mls8jLZ54bWLN37nh3q0trT+iUZOpy8dtLGQQ5qtzc+X9OLSmzYP3ppnXEyIA/lNpGVvKWGaUMsB/euEuSsUhK2LdNDB72Ye6ZtBkDfGrqJIKmwmCYYq2knkn9ll9vI9n2v22vC6CGQVSqGodzCGZaSn7LqOTq3I1LuwYwZQPIUEy0qPcp1oGrIHn3PMQ6zKNdqm7ECG8XRFFC5wKK9zyNNk6z+GtGsNjPK/yWzdXTqWCgMDLs+BYspYrZZ7aErgvvD6ombTPor7SsBk6LjmcijcD/lcwVF4dvPPWJu4htmsbCvJ/S5YXgBanX1PtclmyBPjWfM4T8YDQKKE4I5xN64Gh1R/TyJYA6zo2mf4SClW11JCOoKb4Dht4GM9oH7QGnCBYS3vwQbCzqkvLX5VTYKPQnmh+sayIsP9055D2GCGweeZ1WvfHMyEGCChgVjBeguQeI=
-  - secure: RA2euHO6Og1/eI6lSE/WoHI3QwjQ8r0A+Hxs2ELjpgxyTscsB29I43s0VDvIZ5kvIIiu27pIQAxKCAVbUwduZN8v/wb2aT0vKys809/iMCXit5PK5BShM/c6657EOXsWEGelBSIt1L8EAbrn34a/iZSrjLhRNY2DrO8aXo0WvkSyZxB8NliFkxOu3FbIBp645f/zxqBW4ZGZ/IA+Pmrmai6Qxi3bgdRi2V9K2/0YuP9N10FQmHQo2DwrA4yw/4K0xDGuM/dT9Al2iLDdD+eqDjgeG3i1HPzJsF/m9j/9mWIdwEsOC8QsNOaiT/Kk3z6U4/ZQvZ8GZnHlet0l5TwAIQqntcq8p4i7bUvvthwQKRrYIpWWjWXVkPZAc3fpEX2AaGyB6sFKWiiqPiyUmlatJYwSsk21SoJ15MckT4vITO+cdRQrnM2W6+pXkNB/bR6+NTEdEwZYF1NMtzTTF0Ce1idMSCrfBpwkkD9/gg7wbjaTpRmSWzMaZKICwtcPqoU6T2f00/SDOP/HjUFluFFu3SS1u0Ly7BlNeccSXuhVLg8Ly2HjMW3KkPew/jYq0/7f5Dsxq0QHTcrQ92kb3ZA2aJgCkOemQUWBIeezUNIAdVqdZ0Nl8E7NsjX5DxIQtfKwT1scAFJBhLN6kUkgza6lxH8aBlJ8b3Kbe5DrHJh3HZM=
- script:
-- mvn clean verify --settings mvnsettings.xml -Dgpg.skip
-before_deploy:
-- mvn help:evaluate -N -Dexpression=project.version | grep -v '\['
-- export project_version=$(mvn help:evaluate -N -Dexpression=project.version | grep
-  -v '\[')
-- gpg2 --keyring=$TRAVIS_BUILD_DIR/pubring.gpg --no-default-keyring --import deployment/signingkey.asc
-- gpg2 --allow-secret-key-import --keyring=$TRAVIS_BUILD_DIR/secring.gpg --no-default-keyring
-  --import deployment/signingkey.asc
-- mvn clean deploy -DskipTests --settings mvnsettings.xml -Dgpg.executable=gpg2 -Dgpg.passphrase=$PASSPHRASE
-  -Dgpg.publicKeyring=$TRAVIS_BUILD_DIR/pubring.gpg -Dgpg.secretKeyring=$TRAVIS_BUILD_DIR/secring.gpg
-- mvn deploy -B --settings mvnsettings.xml
-deploy:
-  provider: releases
-  api_key:
-    secure: DFAKRA8zSwM3d4pMm7Mkye6rrgjv6PD1ExyZBKawX4bTGAefFcdiE35bUR+AViskongLtTMyThmtxkMYSm9f9+tYwN3Age6sqZiiZO9MxhCkgA60Z605KQKLlEavGYJQQhsXur9IEQ71hG5x401er6q7WFwAukS9HYkDEIONjNGGsSIhZHPZfPJU5c0TwzJHZLnYnHUWS0bbZ878UeNme7fwDGh968DEPGvvRPJ9ELxzOO52xv0BafKbtdMwxyercB/TBEoA8RNjzlZEHnSAvr2RHfhVKn/E23Yl3tW5OdY6nG2AgH+83PGAjWORmmlvRM9+ITBR/L8X/NE03aXHTz1BG7o/UONmILjmbz9U+PniTAFH+xcsWTMtDGF3hUkvzKj8tJ8GugB2MYcfkWm2gUAPuBWkH5z4Hb6nffXKYVEMy5E5fjUdDSlXKhLbMOVf6JwlJYOi7Y7z1YUKj0w01+DzLl2Ia1YBaUAIP1S4lwEGbc93S1ZNlWGhkHLY01xeBANSRZVC7BcUQM0EFHBLog/oh8hiG8rHIK0SQm9JXoc+mhfOWuvg+vsRP9YklRENui7PfR0Zwd8PYrQE5/VDygenpLt0rd0OOHtNDu6lMK8YAR9iucPGpRglZfxk7wrjd8fonW0ywwB6SBiAZYywX6gLZ1sNZ4MhbKvAUP2plI8=
-  file_glob: true
-  file: "/**/OMJava-$project_version*.jar"
-  skip_cleanup: true
-  overwrite: true
-  draft: true
-  on:
-    repo: RaspInLoop/OMJava
-    tag: true
-  name: "$project_version"
 - sudo apt-get update
 - sudo apt-get install openmodelica
 - sudo apt-get install omc-java
