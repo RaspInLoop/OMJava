@@ -24,15 +24,15 @@ env:
   - secure: xCWEsJsgbsr41ptwkzmLw7WokhDbB+R9mMU5ehpbj0lyCdwGfE3DWJTEj0CkTpIpFhQvWKP/izXyuUUYO7vtgGo7I4UkM92RUOJmF+PQhjJOeKOydJHkIzIya6wJ80p9lTolm/u0xKLnFuXHFPjG6UxfJ4PKyzHbAi31MQUCbY8reHWkheSNU8IhHa5nVRXaydgbs4uRkvel9AybCQD3Rs6rVSk+9nhJdCex0mls8jLZ54bWLN37nh3q0trT+iUZOpy8dtLGQQ5qtzc+X9OLSmzYP3ppnXEyIA/lNpGVvKWGaUMsB/euEuSsUhK2LdNDB72Ye6ZtBkDfGrqJIKmwmCYYq2knkn9ll9vI9n2v22vC6CGQVSqGodzCGZaSn7LqOTq3I1LuwYwZQPIUEy0qPcp1oGrIHn3PMQ6zKNdqm7ECG8XRFFC5wKK9zyNNk6z+GtGsNjPK/yWzdXTqWCgMDLs+BYspYrZZ7aErgvvD6ombTPor7SsBk6LjmcijcD/lcwVF4dvPPWJu4htmsbCvJ/S5YXgBanX1PtclmyBPjWfM4T8YDQKKE4I5xN64Gh1R/TyJYA6zo2mf4SClW11JCOoKb4Dht4GM9oH7QGnCBYS3vwQbCzqkvLX5VTYKPQnmh+sayIsP9055D2GCGweeZ1WvfHMyEGCChgVjBeguQeI=
   - secure: RA2euHO6Og1/eI6lSE/WoHI3QwjQ8r0A+Hxs2ELjpgxyTscsB29I43s0VDvIZ5kvIIiu27pIQAxKCAVbUwduZN8v/wb2aT0vKys809/iMCXit5PK5BShM/c6657EOXsWEGelBSIt1L8EAbrn34a/iZSrjLhRNY2DrO8aXo0WvkSyZxB8NliFkxOu3FbIBp645f/zxqBW4ZGZ/IA+Pmrmai6Qxi3bgdRi2V9K2/0YuP9N10FQmHQo2DwrA4yw/4K0xDGuM/dT9Al2iLDdD+eqDjgeG3i1HPzJsF/m9j/9mWIdwEsOC8QsNOaiT/Kk3z6U4/ZQvZ8GZnHlet0l5TwAIQqntcq8p4i7bUvvthwQKRrYIpWWjWXVkPZAc3fpEX2AaGyB6sFKWiiqPiyUmlatJYwSsk21SoJ15MckT4vITO+cdRQrnM2W6+pXkNB/bR6+NTEdEwZYF1NMtzTTF0Ce1idMSCrfBpwkkD9/gg7wbjaTpRmSWzMaZKICwtcPqoU6T2f00/SDOP/HjUFluFFu3SS1u0Ly7BlNeccSXuhVLg8Ly2HjMW3KkPew/jYq0/7f5Dsxq0QHTcrQ92kb3ZA2aJgCkOemQUWBIeezUNIAdVqdZ0Nl8E7NsjX5DxIQtfKwT1scAFJBhLN6kUkgza6lxH8aBlJ8b3Kbe5DrHJh3HZM=
 script:
- - mvn clean verify --settings mvnsettings.xml -Dgpg.skip
+- mvn clean verify --settings mvnsettings.xml -Dgpg.skip
 before_deploy:
- - mvn help:evaluate -N -Dexpression=project.version | grep -v '\['
- - export project_version=$(mvn help:evaluate -N -Dexpression=project.version | grep
+- mvn help:evaluate -N -Dexpression=project.version | grep -v '\['
+- export project_version=$(mvn help:evaluate -N -Dexpression=project.version | grep
   -v '\[')
- - gpg2 --keyring=$TRAVIS_BUILD_DIR/pubring.gpg --no-default-keyring --import deployment/signingkey.asc
- - gpg2 --allow-secret-key-import --keyring=$TRAVIS_BUILD_DIR/secring.gpg --no-default-keyring
+- gpg2 --keyring=$TRAVIS_BUILD_DIR/pubring.gpg --no-default-keyring --import deployment/signingkey.asc
+- gpg2 --allow-secret-key-import --keyring=$TRAVIS_BUILD_DIR/secring.gpg --no-default-keyring
   --import deployment/signingkey.asc
- - mvn clean deploy -DskipTests --settings mvnsettings.xml -Dgpg.executable=gpg2 -Dgpg.passphrase=$PASSPHRASE
+- mvn clean deploy -DskipTests --settings mvnsettings.xml -Dgpg.executable=gpg2 -Dgpg.passphrase=$PASSPHRASE
   -Dgpg.publicKeyring=$TRAVIS_BUILD_DIR/pubring.gpg -Dgpg.secretKeyring=$TRAVIS_BUILD_DIR/secring.gpg
 - mvn deploy -B --settings mvnsettings.xml
 deploy:
