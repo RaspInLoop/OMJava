@@ -31,6 +31,7 @@ before_deploy:
   deployment/signingkey.asc
 - gpg2 --allow-secret-key-import --keyring=$TRAVIS_BUILD_DIR/secring.gpg --no-default-keyring
   --batch --import deployment/signingkey.asc
+- echo $PASSPHRASE
 - mvn clean deploy --settings mvnsettings.xml -Dgpg.executable=gpg2 -Dgpg.passphrase=$PASSPHRASE
   -Dgpg.publicKeyring=$TRAVIS_BUILD_DIR/pubring.gpg -Dgpg.secretKeyring=$TRAVIS_BUILD_DIR/secring.gpg
 - mvn deploy -B --settings mvnsettings.xml
