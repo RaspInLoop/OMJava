@@ -2,14 +2,16 @@ language: java
 install: true
 dist: bionic
 before_install:
-- openssl aes-256-cbc -K $encrypted_4a163bf52816_key -iv $encrypted_4a163bf52816_iv -in deployment/signingkey.asc.enc -out deployment/signingkey.asc -d
-- for deb in deb deb-src; do echo "$deb http://build.openmodelica.org/apt `lsb_release -cs` release"; done | sudo tee /etc/apt/sources.list.d/openmodelica.list
-- wget -q http://build.openmodelica.org/apt/openmodelica.asc -O- | sudo apt-key add -
+- openssl aes-256-cbc -K $encrypted_4a163bf52816_key -iv $encrypted_4a163bf52816_iv
+  -in deployment/signingkey.asc.enc -out deployment/signingkey.asc -d
+- for deb in deb deb-src; do echo "$deb http://build.openmodelica.org/apt `lsb_release
+  -cs` release"; done | sudo tee /etc/apt/sources.list.d/openmodelica.list
+- wget -q http://build.openmodelica.org/apt/openmodelica.asc -O- | sudo apt-key add
+  -
 - sudo apt-get update
 - sudo apt-get install openmodelica
 - sudo apt-get install omc-java
 - sudo apt-get install omlib-modelica-3.2.2
-
 cache:
   directories:
   - "$HOME/.m2"
@@ -24,11 +26,13 @@ script:
 - mvn clean verify --settings mvnsettings.xml -Dgpg.skip
 before_deploy:
 - mvn help:evaluate -N -Dexpression=project.version | grep -v '\['
-- export project_version=$(mvn help:evaluate -N -Dexpression=project.version | grep -v '\[')
+- export project_version=$(mvn help:evaluate -N -Dexpression=project.version | grep
+  -v '\[')
 - gpg2 --keyring=$TRAVIS_BUILD_DIR/pubring.gpg --no-default-keyring --import deployment/signingkey.asc
-- gpg2 --allow-secret-key-import --keyring=$TRAVIS_BUILD_DIR/secring.gpg --no-default-keyring --import deployment/signingkey.asc
-- mvn clean deploy --settings mvnsettings.xml -Dgpg.executable=gpg2 -Dgpg.passphrase=$PASSPHRASE -Dgpg.publicKeyring=$TRAVIS_BUILD_DIR/pubring.gpg -Dgpg.secretKeyring=$TRAVIS_BUILD_DIR/secring.gpg
-
+- gpg2 --allow-secret-key-import --keyring=$TRAVIS_BUILD_DIR/secring.gpg --no-default-keyring
+  --import deployment/signingkey.asc
+- mvn clean deploy --settings mvnsettings.xml -Dgpg.executable=gpg2 -Dgpg.passphrase=$PASSPHRASE
+  -Dgpg.publicKeyring=$TRAVIS_BUILD_DIR/pubring.gpg -Dgpg.secretKeyring=$TRAVIS_BUILD_DIR/secring.gpg
 - mvn deploy -B --settings mvnsettings.xml
 deploy:
   provider: releases
