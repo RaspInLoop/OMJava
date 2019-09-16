@@ -42,6 +42,6 @@ deploy:
   overwrite: true
   draft: true
   on:
-    tag: true
+    tags: true
     repo: RaspInLoop/OMJava
   name: "$project_version"
