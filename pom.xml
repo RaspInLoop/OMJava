@@ -4,6 +4,26 @@
 	<artifactId>OMJava</artifactId>
 	<version>0.0.8-SNAPSHOT</version>
 
+	<name>${project.groupId}:${project.artifactId}</name>
+	<description>OpenModelica Java Interface. Code used to communicate with OMC (via corba) fork from https://github.com/OpenModelica/OMJava</description>
+	<url>https://github.com/RaspInLoop/OMJava</url>
+
+	<licenses>
+		<license>
+			<name>BSD 3-Clause License</name>
+			<url>https://opensource.org/licenses/BSD-3-Clause</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Mahiant Frédéric</name>
+			<email>fred@raspinloop.org</email>
+			<organization>raspinloop</organization>
+			<organizationUrl>http://www.raspinloop.org</organizationUrl>
+		</developer>
+  	</developers>
+
 	<build>
 		<plugins>
 			<plugin>
